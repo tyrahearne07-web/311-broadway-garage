@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>311 West Broadway Garage | Friendly & Secure Parking</title>
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --secondary: #2563eb;
+      --accent: #f59e0b;
+      --bg-light: #f8fafc;
+      --text-dark: #1e293b;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+    body { background-color: var(--bg-light); color: var(--text-dark); line-height: 1.6; }
+    
+    header { background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; }
+    .logo { font-size: 1.25rem; font-weight: 700; color: var(--primary); display: flex; align-items: center; gap: 0.5rem; }
+    
+    .hero { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: #fff; padding: 4rem 1.5rem; text-align: center; }
+    .hero-content { max-width: 800px; margin: 0 auto; }
+    .hero h1 { font-size: 2.2rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 2rem; }
+    .btn { display: inline-block; background: var(--accent); color: #fff; padding: 0.8rem 2rem; border-radius: 8px; font-weight: 600; text-decoration: none; border: none; cursor: pointer; text-align: center; }
+    
+    .section { max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+    .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 2rem; color: var(--primary); }
+    
+    .about-card { background: #fff; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; }
+    .about-badge { display: inline-block; background: #e0e7ff; color: #3730a3; font-weight: 600; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.875rem; margin-bottom: 1rem; }
+    
+    .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .card { background: #fff; border-radius: 12px; padding: 2rem; border: 1px solid #e2e8f0; text-align: center; }
+    .card-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+    .card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; color: var(--primary); }
+    
+    .form-container { background: #fff; border-radius: 12px; padding: 2rem; max-width: 600px; margin: 0 auto; border: 1px solid #e2e8f0; }
+    .form-group { margin-bottom: 1.25rem; }
+    .form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.9rem; }
+    .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 1rem; }
+    
+    footer { background: #0f172a; color: #94a3b8; padding: 2rem 1.5rem; text-align: center; font-size: 0.9rem; margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo">🚗 311 West Broadway Garage</div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Local & Friendly Neighborhood Parking</h1>
+      <p>Safe, secure short-term and long-term parking options available right on West Broadway.</p>
+      <a href="#contact" class="btn">Reserve a Spot</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="about-card">
+      <span class="about-badge">Neighborhood Parking</span>
+      <h2>Like Parking in a Family Backyard</h2>
+      <p>We offer a hassle-free, local parking service designed for friends, family, and neighbors. Whether you need a spot for a few hours or a secure location to leave your vehicle long-term, we offer personal care and flexible space.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Parking Options</h2>
+    <div class="services-grid">
+      <div class="card">
+        <div class="card-icon">⏱️</div>
+        <h3>Short-Term Parking</h3>
+        <p>Perfect for daily visits, overnight stays, weekend trips, or neighborhood events.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon">📅</div>
+        <h3>Long-Term Parking</h3>
+        <p>Guaranteed weekly or monthly parking spots for regular visitors and local residents.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <h2 class="section-title">Request a Parking Space</h2>
+    <div class="form-container">
+      <form onsubmit="alert('Thank you! Your parking request has been received.'); return false;">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Your name" required>
+        </div>
+        <div class="form-group">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="(555) 000-0000" required>
+        </div>
+        <div class="form-group">
+          <label>Parking Duration</label>
+          <select required>
+            <option value="">Select option...</option>
+            <option value="short">Short-Term (Hours / Days)</option>
+            <option value="long">Long-Term (Weeks / Months)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Notes or Vehicle Details</label>
+          <textarea rows="4" placeholder="Car model, arrival date, special requests..."></textarea>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">Submit Inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 311 West Broadway Garage. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
